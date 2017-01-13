@@ -1,0 +1,66 @@
+/* basic body styles */
+body {
+  font-family: 'Quicksand', sans-serif;
+  coor: #212121;
+  background: : #ECF0F1;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+/* header styles */
+#header{
+  background: #FFA000;
+  width: 100%;
+  padding: 24px;
+}
+
+#header h1{
+  font-size: 54px;
+  font-weight: bolder;
+}
+
+/* main data styles (price and date) */
+#main-data{
+  margin-top: 60px;
+}
+
+#price{
+  font-size: 48px;
+  font-weight: bold;
+}
+
+#date{
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* detail data styles */
+
+#container-data {
+  background: #FFC107;
+  text-align: center;
+  border-radius: 5px;
+  padding: 24px;
+  margin-top: 60px;
+}
+
+.data-label {
+  font-weight: bold;
+}
+
+
+/* button style at bottom page */
+
+#btn-container .btn{
+  margin-top: 60px;
+  width: 25%;
+  padding: 12px;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  background: #BDBDBD;
+}
+
+#btn-container .btn:hover {
+  background: #757575;
+}
