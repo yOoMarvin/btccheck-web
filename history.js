@@ -16,7 +16,7 @@ function buildUrl() {
 
 
 function fetchData() {
-  //handle request and fill data
+  //handle request and format data
   let url = buildUrl();
   $.getJSON(url, function(data){
     formatData(data);
@@ -26,7 +26,31 @@ function fetchData() {
 
 function formatData(data) {
   //fill UI elements with data from json
-  console.log(data);
+  for (var i = 0; i < data.length; i++) {
+    var date = formatDate(data[i].time);
+    dates.push(date);
+    prices.push(data[i].average);
+  }
+
+  //reverse arrays for correct order
+  dates = dates.reverse();
+  prices = prices.reverse();
+
+  //console.log(dates);
+  //console.log(prices);
+}
+
+function formatDate(date) {
+  //slice "00:00:00" out
+  var date = date.slice(0, 10);
+
+  var year = date.slice(0, 4);
+  var month = date.slice(5, 7);
+  var day = date.slice(8, 10);
+
+  var result = month + "/" + day + "/" + year;
+
+  return result;
 }
 
 
