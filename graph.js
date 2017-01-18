@@ -38,8 +38,6 @@ function generateGraph() {
 
     });
 
-    console.log(data);
-
 
     x.domain(d3.extent(data, function(d) { return d.date; }));
     y.domain(d3.extent(data, function(d) { return d.close; }));
