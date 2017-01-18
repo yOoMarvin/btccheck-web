@@ -86,3 +86,21 @@ body {
   stroke: #FFC107;
   stroke-width: 2.5px;
 }
+
+/* footer styles */
+footer{
+  font-size: 14px;
+  color: #282828;
+  margin-left: 20px;
+  bottom: 0;
+  width: 100%
+  position: fixed;
+}
+
+footer a{
+  color: #FFA000;
+}
+
+footer a:hover{
+  color: #FFC107;
+}
