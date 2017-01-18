@@ -52,7 +52,7 @@ function generateDate() {
 
 function formatChange(change){
   if (change < 0 ){
-    change = "- " + change + " %";
+    change = change + " %";
     $("#change").css("color", "#d9534f");
   }else {
     change = "+ " + change + " %";
