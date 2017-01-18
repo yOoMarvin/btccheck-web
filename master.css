@@ -70,3 +70,19 @@ body {
 #btn-container .btn:hover {
   background: #757575;
 }
+
+/* graph styles */
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+
+.line {
+  fill: none;
+  stroke: #FFC107;
+  stroke-width: 2.5px;
+}

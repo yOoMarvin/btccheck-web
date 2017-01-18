@@ -1,5 +1,4 @@
-var dates = [];
-var prices = [];
+var arrData = [];
 
 
 function buildUrl() {
@@ -28,29 +27,31 @@ function formatData(data) {
   //fill UI elements with data from json
   for (var i = 0; i < data.length; i++) {
     var date = formatDate(data[i].time);
-    dates.push(date);
-    prices.push(data[i].average);
+    var price = data[i].average;
+    var arr = [date, price];
+
+    arrData.push(arr);
   }
 
-  //reverse arrays for correct order
-  dates = dates.reverse();
-  prices = prices.reverse();
+  //reverse array for correct order
+  arrData = arrData.reverse();
 
-  //console.log(dates);
-  //console.log(prices);
+  //console.log(arrData);
+  generateGraph();
 }
 
 function formatDate(date) {
   //slice "00:00:00" out
   var date = date.slice(0, 10);
 
-  var year = date.slice(0, 4);
-  var month = date.slice(5, 7);
-  var day = date.slice(8, 10);
+  //var year = date.slice(0, 4);
+  //var month = date.slice(5, 7);
+  //var day = date.slice(8, 10);
 
-  var result = month + "/" + day + "/" + year;
+  //var result = month + "/" + day + "/" + year;
 
-  return result;
+  //return result;
+  return date;
 }
 
 
